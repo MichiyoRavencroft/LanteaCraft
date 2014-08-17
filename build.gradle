@@ -49,7 +49,14 @@ jar.manifest = manifest { attributes(
 	"FMLCorePlugin": "pcl.lc.coremod.LCCoreMod",
 	"FMLCorePluginContainsFMLMod": "icanhazfmlmodpweeze"
 ) }
-
+apply plugin: 'curseforge'
+curse {
+	apiKey = project.curseforge_key
+	projectId = "77342"
+	releaseType = "beta"
+	changelog = file("changelog.txt").text
+//addGameVersion "1.7.2"
+}
 processResources {
 	from(sourceSets.main.resources.srcDirs) {
 		include 'mcmod.info'
