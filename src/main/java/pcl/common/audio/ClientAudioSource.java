@@ -45,7 +45,10 @@ public class ClientAudioSource extends AudioSource implements Comparable<ClientA
 			setVolume(volume);
 		} catch (MalformedURLException malurl) {
 			LanteaCraft.getLogger().log(Level.WARNING, "Could not initialize AudioSource.", malurl);
-		}
+		} catch (NullPointerException e) {
+        		System.out.print("Caught the NullPointerException");
+        		System.out.print(e);
+        	}
 	}
 
 	@Override
