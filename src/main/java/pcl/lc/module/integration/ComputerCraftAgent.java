@@ -3,10 +3,15 @@ package pcl.lc.module.integration;
 import java.lang.reflect.Method;
 import java.util.logging.Level;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import pcl.common.helpers.RegistrationHelper;
 import pcl.lc.LanteaCraft;
+import pcl.lc.LanteaCraft.Blocks;
+import pcl.lc.LanteaCraft.Items;
 import pcl.lc.api.internal.Agent;
 import pcl.lc.api.internal.IIntegrationAgent;
 import pcl.lc.module.integration.computercraft.BlockComputerCraftConnector;
@@ -58,6 +63,8 @@ public class ComputerCraftAgent implements IIntegrationAgent {
 		block_connector = RegistrationHelper.registerBlock(BlockComputerCraftConnector.class,
 				"integration.computercraft");
 		GameRegistry.registerTileEntity(TileEntityComputerCraftConnector.class, "tileEntityComputercraftAdapter");
+		RegistrationHelper.newRecipe(new ItemStack(Blocks.BlockComputerCraftConnector, 1), "OOO", "OcO", "OrO",
+				'O', Block.obsidian, 'r', Item.redstone, 'c', Items.controllerCrystal);
 
 	}
 

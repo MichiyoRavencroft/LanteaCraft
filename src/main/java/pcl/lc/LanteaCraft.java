@@ -54,6 +54,7 @@ import pcl.lc.render.tileentity.TileEntityNaquadahGeneratorRenderer;
 import pcl.lc.render.tileentity.TileEntityRingPlatformRenderer;
 import pcl.lc.render.tileentity.TileEntityStargateBaseRenderer;
 import pcl.lc.render.tileentity.TileEntityStargateControllerRenderer;
+import pcl.lc.module.integration.computercraft.BlockComputerCraftConnector;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -101,6 +102,7 @@ public class LanteaCraft {
 		public static BlockStargateBase stargateBaseBlock;
 		public static BlockStargateRing stargateRingBlock;
 		public static BlockStargateController stargateControllerBlock;
+		public static BlockComputerCraftConnector BlockComputerCraftConnector;
 
 		public static BlockLanteaOre lanteaOre;
 		public static BlockOfLanteaOre lanteaOreAsBlock;
